@@ -5,38 +5,34 @@ import java.util.Scanner;
 public class MediaIdade {
 
 	public static void main(String[] args) {
-		
+
 		Scanner scanner = new Scanner(System.in);
-		
-		int idade;
-        int somaIdades = 0;
-        int contador = 0;
 
-        System.out.println("Digite as idades:");
+		int idade = 0;
+		int somaIdade = 0;
+		int contador = 0;
 
-        while (true) {
-            idade = scanner.nextInt();
+		System.out.println("Digite a idade:");
 
-            // Verifica se a idade é negativa
-            if (idade < 0) {
-                // Se for a primeira entrada, exibe mensagem de impossibilidade
-                if (contador == 0) {
-                    System.out.println("IMPOSSIVEL CALCULAR");
-                } else {
-                    // Se já houver entradas válidas, calcula e exibe a média
-                    double media = (double) somaIdades / contador;
-                    System.out.printf("MEDIA = %.2f\n", media);
-                }
-                break; // Sai do loop
-            }
-
-            // Soma as idades e incrementa o contador
-            somaIdades += idade;
-            contador++;
-        }
-
-        scanner.close(); // Fecha o scanner para evitar vazamento de recursos
-    }
-		
+		while (true) {
+			idade = scanner.nextInt();
+			
+			if(idade < 0) {
+				
+				if(idade == 0) {
+				System.out.println("IMPOSSÍVEL CALCULAR!");
+			}
+				else {
+					double media = (double) somaIdade / contador;
+					
+					System.out.printf("MÉDIA = %.2f\n", media);
+				}
+				break;
+				
+			}
+			somaIdade += idade;
+			contador++;
+		}
+	}
 
 }
