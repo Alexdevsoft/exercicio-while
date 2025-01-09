@@ -12,7 +12,7 @@ public class SenhaFixa {
 		System.out.print("Digite a senha: ");
 		senha = scanner.nextInt();
 		
-		while(senha != 2002) {
+		while(senha != 2025) {
 			System.out.print("Senha inválida! Digite a senha: ");
 			senha = scanner.nextInt();
 		}
